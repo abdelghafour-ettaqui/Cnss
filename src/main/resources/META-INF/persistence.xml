@@ -5,17 +5,17 @@
              version="3.0">
     <persistence-unit name="default">
 
-<!--        <class>entities.AdminEntity</class>-->
-<!--        <class>entities.ChauffeurEntity</class>-->
-<!--        <class>entities.LivraisonEntity</class>-->
-<!--        <class>entities.StaffEntity</class>-->
-<!--        <class>entities.TrajetEntity</class>-->
+        <class>entities.Admin</class>
+        <class>entities.Patient</class>
+        <class>entities.Dossier</class>
+        <class>entities.Medicament</class>
+        <class>entities.Agent</class>
 
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3305/cnss"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cnss"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.username" value="root"/>
-            <property name="hibernate.connection.password" value="root"/>
+            <property name="hibernate.connection.username" value="linsen"/>
+            <property name="hibernate.connection.password" value="linsen"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>

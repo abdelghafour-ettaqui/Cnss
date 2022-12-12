@@ -7,14 +7,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan({"Controllers"})
+@ComponentScan({"Controllers","Dao"})
 public class CnssConfig {
 
     @Bean
     public InternalResourceViewResolver viewResolver(){
 
         InternalResourceViewResolver vr = new InternalResourceViewResolver();
-        vr.setPrefix("/webapp/");
+        vr.setPrefix("/WEB-INF/view/");
         vr.setSuffix(".jsp");
 
         return vr;

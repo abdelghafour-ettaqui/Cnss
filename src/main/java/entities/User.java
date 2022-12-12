@@ -2,7 +2,9 @@ package entities;
 
 import jakarta.persistence.*;
 
-@Entity
+import java.util.Collection;
+
+@MappedSuperclass
 public class User {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Id
@@ -20,8 +22,6 @@ public class User {
     @Basic
     @Column(name="role")
     private String role;
-
-
 
 
     public long getIduser() {
@@ -61,6 +61,17 @@ public class User {
     }
 
     public void setRole(String role) {
+        this.role = role;
+    }
+
+    public User() {
+    }
+
+    public User(long iduser, String fullname, String email, String password, String role) {
+        this.iduser = iduser;
+        this.fullname = fullname;
+        this.email = email;
+        this.password = password;
         this.role = role;
     }
 }
